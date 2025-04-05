@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivationsspruch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background: #f0f0f0;
+        }
+        #spruch {
+            font-size: 1.5rem;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dein Motivationsspruch</h1>
+    <div id="spruch">Drück auf den Knopf!</div>
+    <button onclick="zeigeSpruch()">Neuer Spruch</button>
+
+    <script>
+        const sprueche = [
+            "Du schaffst das!",
+            "Mach einfach weiter!",
+            "Jeder Tag ist eine neue Chance.",
+            "Große Dinge brauchen Zeit.",
+            "Sei stolz auf dich!",
+            "Auch kleine Schritte bringen dich voran."
+        ];
+
+        function zeigeSpruch() {
+            const zufall = Math.floor(Math.random() * sprueche.length);
+            document.getElementById('spruch').textContent = sprueche[zufall];
+        }
+    </script>
+</body>
+</html>
